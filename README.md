@@ -39,7 +39,7 @@ The API has
             *   The API calls into the injected Pets Manager.                
 
 *   an Unit Test project
-    *   This contains unit tests for the Business Logic.  
+    *   This contains unit tests for the Business Logic. **NSubstitute** is used to mock the Repository layer.  
 
 **The Web API response JSON is like:**
 
