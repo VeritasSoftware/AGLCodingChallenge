@@ -18,13 +18,15 @@ The API has
     *   This contains
         
         *   a Pets Repository
-            *   This uses HttpClient to fetch the pets and their owners. This Repository is injected into the Pets Manager.
+            *   This uses HttpClient to fetch the pets and their owners. It uses **Newtonsoft.Json** to deserialize the data. 
+            *   This Repository is injected into the Pets Manager.
 
 *   a Business Logic project
     *   This contains
         
         *   a Pets Manager
-            *   This uses LINQ to extract the pets by pet type and owner's gender from the data. This Pets Manager is injected into the Controller.            
+            *   This uses LINQ to extract the pets by pet type and owner's gender from the data. 
+            *   This Pets Manager is injected into the Controller.            
 
 * an ASPNET Core 2.0 Web API project
     *   This contains
