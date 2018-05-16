@@ -34,7 +34,7 @@ The API has
 
                 | API | Verb | Route | Sample Url |
                 | ---------- | -------- | --------- | ----------- |
-                | petsbypersongender | GET | /api/Pets/petsbypersongender | http://localhost:64875/api/Pets/petsbypersongender |
+                | petsbypersongender | GET | /api/Pets/petsbypersongender | http://localhost:64875/api/Pets/petsbypersongender?petType=Cat |
 
             *   The API calls into the injected Pets Manager.                
 
