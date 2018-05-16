@@ -24,7 +24,7 @@ The API has
     *   This contains
         
         *   a Pets Manager
-            *   This uses LINQ to extract the pets by owner's gender. This Pets Manager is injected into the Controller.            
+            *   This uses LINQ to extract the pets by pet type and owner's gender from the data. This Pets Manager is injected into the Controller.            
 
 * an ASPNET Core 2.0 Web API project
     *   This contains
