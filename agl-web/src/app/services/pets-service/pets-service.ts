@@ -16,18 +16,14 @@ export class PetsService implements IPetsService {
 
     }
 
-    /*************************************/
-    /* Get the company hierarchy         */
-    /* Make async http call to API       */
-    /* Pass hierarchy string to delegate */
-    /*************************************/
+    /**************************************************/
+    /* Get the pets by pet type and by owner's gender */
+    /* Make async http call to API                    */
+    /**************************************************/
     private async GetPetsByPersonGender(petType: PetType): Promise<PetsByPersonGenderCollection> {
         var url = this.apiBaseUrl + "petsbypersongender?petType=" + petType.toString();
 
-        //Async http call to API
-        //The response is transformed into a string for display
-        //The hierarchy string is passed to the delegate
-        //If error, it is also passed to delegate
+        //Async http call to API using HttpClient
         return await this.http.get<PetsByPersonGenderCollection>(url)
                               .toPromise();                         
     }  

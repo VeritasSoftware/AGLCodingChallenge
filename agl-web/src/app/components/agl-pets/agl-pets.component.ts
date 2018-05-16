@@ -14,6 +14,10 @@ export class AglPetsComponent implements OnInit {
   catsByPersonGender: PetsByPersonGenderCollection;
   genders: Gender[];
 
+  /******************************************/
+  /* Constructor                            */
+  /* petsService: The injected Pets Service */
+  /******************************************/
   constructor(private petsService: PetsService) { }
 
   async ngOnInit() {
@@ -21,6 +25,7 @@ export class AglPetsComponent implements OnInit {
       this.catsByPersonGender = null;
       this.genders = [];
 
+      //Async call to API using injected Pets Service
       this.catsByPersonGender = await this.petsService.GetCatsByPersonGender();
 
       this.genders.push((<any>Gender)[this.catsByPersonGender.petsByPersonGender[0].gender]);
