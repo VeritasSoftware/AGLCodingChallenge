@@ -11,12 +11,7 @@ namespace AGL.Application
         private readonly Person[] _persons;
         private readonly IPetsRepository _petsRepository;
 
-        public string Url { get; set; }
-
-        //public PetsManager(Person[] persons)
-        //{
-        //    _persons = persons ?? throw new ArgumentNullException(nameof(persons));
-        //}
+        public string Url { get; set; }        
 
         public PetsManager(IPetsRepository petsRepository)
         {

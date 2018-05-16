@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.UnitTests", "AGL.UnitTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.Application", "AGL.Application\AGL.Application.csproj", "{19435A04-85E9-4B93-9C6A-CC3B5B73FFE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.API", "AGL.API\AGL.API.csproj", "{13D28D84-9583-4834-A35B-20EF905B4E39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{19435A04-85E9-4B93-9C6A-CC3B5B73FFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19435A04-85E9-4B93-9C6A-CC3B5B73FFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19435A04-85E9-4B93-9C6A-CC3B5B73FFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13D28D84-9583-4834-A35B-20EF905B4E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13D28D84-9583-4834-A35B-20EF905B4E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13D28D84-9583-4834-A35B-20EF905B4E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13D28D84-9583-4834-A35B-20EF905B4E39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
