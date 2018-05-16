@@ -1,0 +1,30 @@
+<div class="panel panel-primary" style="text-align:center">    
+  <div class="panel-body">
+      <div class="form-group" style="text-align:left;">                                                                  
+        <table *ngIf="catsByPersonGender != null" >          
+          <tbody>
+              <tr>
+                  <td style="background-color: gray; color: white">
+                      {{ genders[0] }}
+                  </td>
+                </tr>
+                <tr *ngFor="let cat of catsByPersonGender.petsByPersonGender[0].pets">
+                    <td>
+                      {{ cat.name }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="background-color: gray; color: white">
+                        {{ genders[1] }}
+                    </td>
+                  </tr>
+                  <tr *ngFor="let cat of catsByPersonGender.petsByPersonGender[1].pets">
+                    <td>
+                      {{ cat.name }}
+                    </td>
+                  </tr>
+          </tbody>          
+        </table>
+      </div>        
+  </div>
+</div>
