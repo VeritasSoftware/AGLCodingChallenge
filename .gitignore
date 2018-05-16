@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AGL.API/AGL.Entities/bin/Debug/netcoreapp2.0
+/AGL.API/AGL.Entities/obj
+/AGL.API/AGL.Repository/bin/Debug/netcoreapp2.0
+/AGL.API/AGL.Repository/obj
+/AGL.API/AGL.UnitTests/bin/Debug/netcoreapp2.0
+/AGL.API/AGL.UnitTests/obj
+/AGL.API/AGL.Application/bin/Debug/netcoreapp2.0
+/AGL.API/AGL.Application/obj
