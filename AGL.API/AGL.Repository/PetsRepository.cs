@@ -5,14 +5,12 @@ using System.Threading.Tasks;
 
 namespace AGL.Repository
 {
+    /// <summary>
+    /// Class PetsRepository
+    /// </summary>
     public class PetsRepository : IPetsRepository
     {
-        public string Url { get; set; }
-
-        //public PetsRepository(string url)
-        //{
-        //    this.Url = url;
-        //}
+        public string Url { get; set; }       
 
         public async Task<Person[]> GetPersonAndPets()
         {

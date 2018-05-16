@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AGL.Application
 {
+    /// <summary>
+    /// Class PetsManager
+    /// </summary>
     public class PetsManager : IPetsManager
     {
         private readonly Person[] _persons;
@@ -13,6 +16,10 @@ namespace AGL.Application
 
         public string Url { get; set; }        
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="petsRepository">The injected pets repository</param>
         public PetsManager(IPetsRepository petsRepository)
         {
             _petsRepository = petsRepository ?? throw new ArgumentNullException(nameof(petsRepository));

@@ -4,10 +4,11 @@ using System.Threading.Tasks;
 
 namespace AGL.Application
 {
+    /// <summary>
+    /// Interface IPetsManager
+    /// </summary>
     public interface IPetsManager : IDisposable
     {
-        string Url { get; set; }
-
         Task<PetsByPersonGenderCollection> GetPetsByPersonGender(PetType petType);
     }
 }
