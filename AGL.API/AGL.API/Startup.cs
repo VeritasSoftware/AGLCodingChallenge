@@ -27,6 +27,8 @@ namespace AGL.API
             services.AddScoped<IPetsRepository, PetsRepository>(x => new PetsRepository { Url = apiUrl });
             services.AddScoped<IPetsManager, PetsManager>();
 
+            services.AddCors();
+
             services.AddMvc();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
@@ -35,7 +37,7 @@ namespace AGL.API
                 c.DescribeAllEnumsAsStrings();
 
                 c.SwaggerDoc("v1", new Info { Title = "AGL API", Version = "v1" });
-            });
+            });            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +56,13 @@ namespace AGL.API
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "AGL API V1");
+            });
+
+            app.UseCors(x =>
+            {
+                x.AllowAnyOrigin()
+                 .AllowAnyHeader()
+                 .AllowAnyMethod();
             });
 
             app.UseMvc();
