@@ -20,13 +20,16 @@ namespace AGL.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Get AGL section from AppSettings
             var aglSection = this.Configuration.GetSection("AGL").Get<AGL>();
+            //Get API Url
             var apiUrl = aglSection.ApiUrl;
 
             //add dependency injection
             services.AddScoped<IPetsRepository, PetsRepository>(x => new PetsRepository { Url = apiUrl });
             services.AddScoped<IPetsManager, PetsManager>();
 
+            //Add CORS support
             services.AddCors();
 
             services.AddMvc();
@@ -58,6 +61,7 @@ namespace AGL.API
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "AGL API V1");
             });
 
+            //Add CORS support
             app.UseCors(x =>
             {
                 x.AllowAnyOrigin()
