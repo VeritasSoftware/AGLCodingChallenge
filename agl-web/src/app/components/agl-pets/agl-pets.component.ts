@@ -12,7 +12,7 @@ import { PetsService } from '../../services/pets-service/pets-service';
 export class AglPetsComponent implements OnInit {
 
   catsByPersonGender: PetsByPersonGenderCollection;
-  genders: Gender[];
+  genders: string[];
 
   /******************************************/
   /* Constructor                            */
@@ -23,12 +23,12 @@ export class AglPetsComponent implements OnInit {
   async ngOnInit() {
     try {
       this.catsByPersonGender = null;
-      this.genders = [];
+      this.genders = [Gender[Gender.Male], Gender[Gender.Female]];
 
       //Async call to API using injected Pets Service
       this.catsByPersonGender = await this.petsService.GetCatsByPersonGender();
 
-      this.catsByPersonGender.petsByPersonGender.forEach(x => this.genders.push((<any>Gender)[x.gender]));      
+      //this.catsByPersonGender.petsByPersonGender.forEach(x => this.genders.push((<any>Gender)[x.gender]));      
     }
     catch(e){
       alert(e);

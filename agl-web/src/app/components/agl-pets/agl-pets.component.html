@@ -3,26 +3,20 @@
       <div class="form-group" style="text-align:left;">                                                                  
         <table *ngIf="catsByPersonGender != null" >          
           <tbody>
-              <tr>
-                  <td style="background-color: gray; color: white">
-                      {{ genders[0] }}
-                  </td>
-                </tr>
-                <tr *ngFor="let cat of catsByPersonGender.petsByPersonGender[0].pets">
-                    <td>
-                      {{ cat.name }}
-                    </td>
-                  </tr>
+              <tr *ngFor="let petsByPersonGender of catsByPersonGender.petsByPersonGender">
+                <table>
                   <tr>
-                    <td style="background-color: gray; color: white">
-                        {{ genders[1] }}
-                    </td>
+                      <td style="background-color: gray; color: white">
+                          {{ genders[petsByPersonGender.gender] }}
+                      </td>
                   </tr>
-                  <tr *ngFor="let cat of catsByPersonGender.petsByPersonGender[1].pets">
-                    <td>
-                      {{ cat.name }}
-                    </td>
+                  <tr *ngFor="let cat of petsByPersonGender.pets">
+                      <td>
+                        {{ cat.name }}
+                      </td>
                   </tr>
+                </table>                                
+              </tr>                            
           </tbody>          
         </table>
       </div>        
