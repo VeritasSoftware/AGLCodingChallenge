@@ -28,8 +28,7 @@ export class AglPetsComponent implements OnInit {
       //Async call to API using injected Pets Service
       this.catsByPersonGender = await this.petsService.GetCatsByPersonGender();
 
-      this.genders.push((<any>Gender)[this.catsByPersonGender.petsByPersonGender[0].gender]);
-      this.genders.push((<any>Gender)[this.catsByPersonGender.petsByPersonGender[1].gender]);
+      this.catsByPersonGender.petsByPersonGender.forEach(x => this.genders.push((<any>Gender)[x.gender]));      
     }
     catch(e){
       alert(e);
